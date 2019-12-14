@@ -38,6 +38,9 @@ protected:
 	uint8_t cathodes[DISPLAY_SIZE + 1] = {
 		12, PIN_A1, PIN_A2, PIN_A3, 11
 	};
+	uint8_t blink_status[DISPLAY_SIZE + 1];
+	int blink_counter = 0;
+	void blinking();
 
 	uint8_t charmap[16] = {
 		B00111111,  //0
@@ -62,13 +65,17 @@ protected:
 public:
 	char display[DISPLAY_SIZE];
 	uint8_t dots;
-	uint8_t brightness;
+	uint8_t blink[DISPLAY_SIZE + 1];
+	int blink_speed = 125;   // 2Hz
+	uint8_t brightness = 255;  // Full light
 
 	void init();
 	void init_timer();
 	void refresh();
 	void writeDigit(uint8_t picture);
 	void writeChar(char digit);
+	void writeDigit(uint8_t picture, uint8_t blink_mask);
+	void writeChar(char digit, uint8_t blink_mask);
 };
 
 extern MX4_C301Class MX4_C301;

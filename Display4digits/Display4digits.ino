@@ -24,11 +24,14 @@ void loop() {
 		MX4_C301.display[1] = j % 10;
 		MX4_C301.display[2] = j / 16;
 		MX4_C301.display[3] = j % 16;
-
+		if (j % 10 == 0) {
+			MX4_C301.blink[4] ^= 0xFF;
+		}
 		delay(500);
 	}
 }
 
+// Called every 4 milliseconds
 ISR(TIMER1_COMPA_vect) {        // timer compare interrupt service routine
 	MX4_C301.refresh();
 }
