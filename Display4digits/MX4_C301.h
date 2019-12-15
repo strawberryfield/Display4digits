@@ -1,4 +1,20 @@
-// MX4_C301.h
+// copyright (c) 2019 Roberto Ceccarelli - Casasoft
+// http://strawberryfield.altervista.org 
+// 
+// This is free software: 
+// you can redistribute it and/or modify it
+// under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// This software is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
+// See the GNU General Public License for more details.
+// 
+// You should have received a copy of the GNU General Public License
+// along with these files.  
+// If not, see <http://www.gnu.org/licenses/>.
 
 #ifndef _MX4_C301_h
 #define _MX4_C301_h
@@ -61,13 +77,12 @@ protected:
 		B01110001	//F
 	};
 
-
 public:
-	char display[DISPLAY_SIZE];
-	uint8_t dots;
-	uint8_t blink[DISPLAY_SIZE + 1];
-	int blink_speed = 125;   // 2Hz
-	uint8_t brightness = 255;  // Full light
+	char display[DISPLAY_SIZE];			// Display storage area
+	uint8_t dots;						// Dots storage area
+	uint8_t blink[DISPLAY_SIZE + 1];	// Blink flags
+	int blink_speed = 125;				// default(125): 2Hz
+	uint8_t brightness = 255;			// default(255): Full light  (not yet implemented)
 
 	void init();
 	void init_timer();

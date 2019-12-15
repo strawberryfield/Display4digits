@@ -1,14 +1,22 @@
-/*
- Name:		Display4digit.ino
- Created:	12/11/2019 9:09:33 PM
- Author:	Roberto Ceccarelli
-*/
-
-
+// copyright (c) 2019 Roberto Ceccarelli - Casasoft
+// http://strawberryfield.altervista.org 
+// 
+// This is free software: 
+// you can redistribute it and/or modify it
+// under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// This software is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
+// See the GNU General Public License for more details.
+// 
+// You should have received a copy of the GNU General Public License
+// along with these files.  
+// If not, see <http://www.gnu.org/licenses/>.
 
 #include "MX4_C301.h"
-
-
 
 // the setup function runs once when you press reset or power the board
 void setup() {
@@ -31,7 +39,8 @@ void loop() {
 	}
 }
 
+// timer compare interrupt service routine
 // Called every 4 milliseconds
-ISR(TIMER1_COMPA_vect) {        // timer compare interrupt service routine
+ISR(TIMER1_COMPA_vect) {        
 	MX4_C301.refresh();
 }
