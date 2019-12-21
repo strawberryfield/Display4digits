@@ -47,6 +47,25 @@
 #define DMASK B01111100
 #define BMASK B00000011
 
+#define SEGMENT_A	B00000001
+#define SEGMENT_B	B00000010
+#define SEGMENT_C	B00000100
+#define SEGMENT_D	B00001000
+#define SEGMENT_E	B00010000
+#define SEGMENT_F	B00100000
+#define SEGMENT_G	B01000000
+
+#define LED_1	B00000001
+#define LED_2	B00000010
+#define LED_3	B00000100
+#define LED_67	B00001000
+#define LED_8	B00010000
+#define LED_9	B00100000
+#define LED_11	B01000000
+
+#define BLANK	B10000000
+#define MINUS	B11000000
+
 class MX4_C301Class
 {
 protected:
@@ -86,6 +105,7 @@ public:
 
 	void init();
 	void refresh();
+	void clear();						// clears the display
 	void writeDigit(uint8_t picture);
 	void writeChar(char digit);
 	void writeDigit(uint8_t picture, uint8_t blink_mask);

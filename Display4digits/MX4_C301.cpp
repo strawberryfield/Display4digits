@@ -77,6 +77,14 @@ void  MX4_C301Class::refresh() {
     digitalWrite(cathodes[active], HIGH);
 }
 
+void MX4_C301Class::clear()
+{
+    dots = 0;
+    for (int j = 0; j < DISPLAY_SIZE; j++) {
+        display[j] = BLANK;
+    }
+}
+
 void MX4_C301Class::blinking()
 {
     blink_counter = 0;
