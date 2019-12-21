@@ -85,7 +85,6 @@ public:
 	uint8_t brightness = 255;			// default(255): Full light  (not yet implemented)
 
 	void init();
-	void init_timer();
 	void refresh();
 	void writeDigit(uint8_t picture);
 	void writeChar(char digit);

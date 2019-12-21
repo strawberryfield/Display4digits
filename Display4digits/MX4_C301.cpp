@@ -35,22 +35,6 @@ void MX4_C301Class::init()
 }
 
 
-void MX4_C301Class::init_timer() {
-    //Base interrupt frequency 250Hz
-    // 16MHz / 64 = 250 KHz after prescaler
-    noInterrupts();
-    // reset registers
-    TCCR1A = 0;
-    TCCR1B = 0;
-    TCNT1 = 0;
-
-    OCR1A = 1000;  // Counter after prescaler
-    TCCR1B |= (1 << WGM12);   // CTC mode
-    TCCR1B |= (1 << CS11) | (1 << CS10);    // 64 prescaler 
-    TIMSK1 |= (1 << OCIE1A);  // enable timer compare interrupt
-    interrupts();
-}
-
 void  MX4_C301Class::writeDigit(uint8_t picture, uint8_t blink_mask) {
     picture &= blink_mask;
     PORTD = (PORTD & ~DMASK) | (picture & DMASK);
