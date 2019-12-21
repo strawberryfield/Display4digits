@@ -11,6 +11,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Schematics", "Schematics", "{DBFB2C4D-E1F2-4D81-87E2-0A8CAB09BEC8}"
+	ProjectSection(SolutionItems) = preProject
+		Schematics\BaseDisplay.fzz = Schematics\BaseDisplay.fzz
+		Schematics\BaseDisplay_bb.jpg = Schematics\BaseDisplay_bb.jpg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
