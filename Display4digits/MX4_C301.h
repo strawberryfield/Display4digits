@@ -106,10 +106,11 @@ public:
 	void init();
 	void refresh();
 	void clear();						// clears the display
-	void writeDigit(uint8_t picture);
-	void writeChar(char digit);
-	void writeDigit(uint8_t picture, uint8_t blink_mask);
-	void writeChar(char digit, uint8_t blink_mask);
+	void zero();						// set display to 0
+	void writeDigit(uint8_t picture);						// writes raw data to output ports
+	void writeChar(char digit);								// writes built-incharacter to output ports
+	void writeDigit(uint8_t picture, uint8_t blink_mask);	// writes raw data to output ports with blinking mask
+	void writeChar(char digit, uint8_t blink_mask);			// writes built-incharacter to output ports with blinking mask
 };
 
 extern MX4_C301Class MX4_C301;

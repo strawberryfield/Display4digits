@@ -85,6 +85,12 @@ void MX4_C301Class::clear()
     }
 }
 
+void MX4_C301Class::zero()
+{
+    clear();
+    display[DISPLAY_SIZE - 1] = 0;
+}
+
 void MX4_C301Class::blinking()
 {
     blink_counter = 0;
