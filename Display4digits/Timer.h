@@ -31,7 +31,7 @@ class TimerClass
 
 
  public:
-	void init(int frequency);
+	void init(int frequency);	// Inits timer 2
 };
 
 extern TimerClass Timer;

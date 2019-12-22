@@ -55,8 +55,6 @@ void increase_counters() {
 		j = 0;
 		MX4_C301.clear();
 	}
-
-
 }
 
 // timer compare interrupt service routine

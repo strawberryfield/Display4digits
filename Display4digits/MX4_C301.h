@@ -75,7 +75,7 @@ protected:
 	};
 	uint8_t blink_status[DISPLAY_SIZE + 1];
 	int blink_counter = 0;
-	void blinking();
+	void blinking();		// make blinking
 
 	uint8_t charmap[16] = {
 		B00111111,  //0
@@ -103,8 +103,10 @@ public:
 	int blink_speed = 125;				// default(125): 2Hz
 	uint8_t brightness = 255;			// default(255): Full light  (not yet implemented)
 
-	void init();
-	void refresh();
+	
+	void init();						// inits the display
+	void refresh();						// performs the digits multiplexing	
+	void reset_blinking();				// clears blinking flags
 	void clear();						// clears the display
 	void zero();						// set display to 0
 	void writeDigit(uint8_t picture);						// writes raw data to output ports

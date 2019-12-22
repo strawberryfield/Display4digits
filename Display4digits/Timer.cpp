@@ -18,6 +18,7 @@
 
 #include "Timer.h"
 
+// Inits timer 2
 void TimerClass::init(int frequency)
 {
     // 16MHz / 64 = 250 KHz after prescaler
