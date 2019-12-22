@@ -43,5 +43,17 @@ void Display_TestClass::increase_counters() {
 		clear();
 	}
 }
+
+void Display_TestClass::decimal_counter() {
+	if (j < 25) {
+		write(j);
+		j++;
+	}
+	else {
+		j = -24;
+		clear();
+	}
+}
+
 Display_TestClass Display_Test;
 

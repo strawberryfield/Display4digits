@@ -127,5 +127,66 @@ void MX4_C301Class::blinking()
 
 #pragma endregion
 
+#pragma region writes
+
+// displays an integer value
+// range from -999 to 9999
+void MX4_C301Class::write(int value)
+{
+    clear();
+    if (value == 0) {
+        zero();
+        return;
+    }
+
+    if (value < -999) {             // underflow
+        set_all_digits(9, 0xFF);
+        display[0] = MINUS;
+        return;
+    }
+    if (value > 9999) {             // overflow
+        set_all_digits(9, 0xFF);
+        return;
+    }
+
+    bool negative = false;
+    if (value < 0) {
+        value = -value;
+        negative = true;
+    }
+
+    int pos = DISPLAY_SIZE - 1;
+    while (value > 0)
+    {
+        display[pos] = value % 10;
+        value = value / 10;
+        pos--;
+    }
+
+    if (negative) {
+        display[pos] = MINUS;
+    }
+}
+
+void MX4_C301Class::set_all_digits(uint8_t picture) {
+    for (int j = 0; j < DISPLAY_SIZE; j++) {
+        display[j] = picture;
+    }
+}
+
+void MX4_C301Class::set_all_digits(uint8_t picture, uint8_t blink_mask) {
+    set_all_digits(picture);
+    set_all_blink(blink_mask);
+}
+
+void MX4_C301Class::set_all_blink(uint8_t blink_mask) {
+    reset_blinking();
+    for (int j = 0; j < DISPLAY_SIZE; j++) {
+        blink[j] = blink_mask;
+    }
+}
+
+#pragma endregion
+
 // MX4_C301Class MX4_C301;
 

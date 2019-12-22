@@ -33,7 +33,7 @@ void setup() {
 void loop() {
 	if (millis() - old_millis >= 500) {
 		old_millis = millis();
-		Display_Test.increase_counters();
+		Display_Test.decimal_counter();
 	}
 }
 

@@ -35,6 +35,7 @@ class Display_TestClass : public MX4_C301Class
  public:
 	 void init();
 	 void increase_counters();
+	 void decimal_counter();
 };
 
 extern Display_TestClass Display_Test;

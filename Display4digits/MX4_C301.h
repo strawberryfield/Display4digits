@@ -75,7 +75,12 @@ protected:
 	};
 	uint8_t blink_status[DISPLAY_SIZE + 1];
 	int blink_counter = 0;
+
 	void blinking();		// make blinking
+	void writeDigit(uint8_t picture);						// writes raw data to output ports
+	void writeChar(char digit);								// writes built-incharacter to output ports
+	void writeDigit(uint8_t picture, uint8_t blink_mask);	// writes raw data to output ports with blinking mask
+	void writeChar(char digit, uint8_t blink_mask);			// writes built-incharacter to output ports with blinking mask
 
 	uint8_t charmap[16] = {
 		B00111111,  //0
@@ -109,10 +114,10 @@ public:
 	void reset_blinking();				// clears blinking flags
 	void clear();						// clears the display
 	void zero();						// set display to 0
-	void writeDigit(uint8_t picture);						// writes raw data to output ports
-	void writeChar(char digit);								// writes built-incharacter to output ports
-	void writeDigit(uint8_t picture, uint8_t blink_mask);	// writes raw data to output ports with blinking mask
-	void writeChar(char digit, uint8_t blink_mask);			// writes built-incharacter to output ports with blinking mask
+	void write(int value);				// displays an integer value
+	void set_all_digits(uint8_t picture);
+	void set_all_digits(uint8_t picture, uint8_t blink_mask);
+	void set_all_blink(uint8_t blink_mask);
 };
 
 extern MX4_C301Class MX4_C301;
