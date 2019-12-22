@@ -16,29 +16,28 @@
 // along with these files.  
 // If not, see <http://www.gnu.org/licenses/>.
 
-#include "Display_Test.h"
-#include "Timer.h"
-// #include "MX4_C301.h"
+#ifndef _DISPLAY_TEST_h
+#define _DISPLAY_TEST_h
 
-uint32_t old_millis;	// millis reference
+#if defined(ARDUINO) && ARDUINO >= 100
+	#include "arduino.h"
+#else
+	#include "WProgram.h"
+#endif
 
-// the setup function runs once when you press reset or power the board
-void setup() {
-	Display_Test.init();
-	Timer.init(250);	    //Base interrupt frequency 250Hz
-	old_millis = millis();
-}
+#include "MX4_C301.h"
 
-// the loop function runs over and over again until power down or reset
-void loop() {
-	if (millis() - old_millis >= 500) {
-		old_millis = millis();
-		Display_Test.increase_counters();
-	}
-}
+class Display_TestClass : public MX4_C301Class
+{
+ protected:
+	 int j;		// counter
 
-// timer compare interrupt service routine
-// Called every 4 milliseconds
-ISR(TIMER1_COMPA_vect) {        
-	Display_Test.refresh();
-}
+ public:
+	 void init();
+	 void increase_counters();
+};
+
+extern Display_TestClass Display_Test;
+
+#endif
+

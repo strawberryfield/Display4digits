@@ -17,28 +17,31 @@
 // If not, see <http://www.gnu.org/licenses/>.
 
 #include "Display_Test.h"
-#include "Timer.h"
-// #include "MX4_C301.h"
 
-uint32_t old_millis;	// millis reference
-
-// the setup function runs once when you press reset or power the board
-void setup() {
-	Display_Test.init();
-	Timer.init(250);	    //Base interrupt frequency 250Hz
-	old_millis = millis();
+void Display_TestClass::init()
+{
+	MX4_C301Class::init();
+	j = 0;
 }
 
-// the loop function runs over and over again until power down or reset
-void loop() {
-	if (millis() - old_millis >= 500) {
-		old_millis = millis();
-		Display_Test.increase_counters();
+// advances counters
+void Display_TestClass::increase_counters() {
+	if (j < 99) {
+		j++;
+
+		dots = LED_67;
+		display[0] = j / 10;
+		display[1] = j % 10;
+		display[2] = j / 16;
+		display[3] = j % 16;
+		if (j % 10 == 0) {
+			blink[4] ^= 0xFF;
+		}
+	}
+	else {
+		j = 0;
+		clear();
 	}
 }
+Display_TestClass Display_Test;
 
-// timer compare interrupt service routine
-// Called every 4 milliseconds
-ISR(TIMER1_COMPA_vect) {        
-	Display_Test.refresh();
-}

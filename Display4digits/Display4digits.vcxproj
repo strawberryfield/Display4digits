@@ -116,10 +116,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Display_Test.cpp" />
     <ClCompile Include="MX4_C301.cpp" />
     <ClCompile Include="Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Display_Test.h" />
     <ClInclude Include="MX4_C301.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="__vm\.Display4digits.vsarduino.h" />

@@ -127,5 +127,5 @@ void MX4_C301Class::blinking()
 
 #pragma endregion
 
-MX4_C301Class MX4_C301;
+// MX4_C301Class MX4_C301;
 
