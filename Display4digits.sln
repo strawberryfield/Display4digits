@@ -17,6 +17,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Schematics", "Schematics", 
 		Schematics\BaseDisplay_bb.jpg = Schematics\BaseDisplay_bb.jpg
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doxygen", "Doxygen", "{7DF24AF6-53CC-4901-93C3-53A3DF30E763}"
+	ProjectSection(SolutionItems) = preProject
+		Doxygen\Doxyfile = Doxygen\Doxyfile
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
