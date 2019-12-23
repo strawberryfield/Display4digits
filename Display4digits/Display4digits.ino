@@ -1,7 +1,5 @@
-/** @file Display4digits.ino */
-/**
-\file Display4digits.ino
-Main Arduino entry point
+/** \file 
+Main Arduino entry point.
 */
 
 // copyright (c) 2019 Roberto Ceccarelli - Casasoft
@@ -27,8 +25,8 @@ Main Arduino entry point
 #include "Timer.h"
 // #include "MX4_C301.h"
 
-/** millis reference */
-uint32_t old_millis;	 
+
+uint32_t old_millis;	 //!< millis reference 
 
 /** the setup function runs once when you press reset or power the board */
 void setup() {

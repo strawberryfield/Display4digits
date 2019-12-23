@@ -129,8 +129,8 @@ void MX4_C301Class::blinking()
 
 #pragma region writes
 
-// displays an integer value
-// range from -999 to 9999
+/// displays an integer value
+/// range from -999 to 9999
 void MX4_C301Class::write(int value)
 {
     clear();
@@ -187,6 +187,7 @@ void MX4_C301Class::set_all_blink(uint8_t blink_mask) {
 }
 
 #pragma endregion
+
 
 // MX4_C301Class MX4_C301;
 
