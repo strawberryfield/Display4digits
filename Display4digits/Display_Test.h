@@ -34,6 +34,7 @@
 
 #include "MX4_C301.h"
 
+/** Display test suite */
 class Display_TestClass : public MX4_C301Class
 {
  private:

@@ -32,13 +32,14 @@
 	#include "WProgram.h"
 #endif
 
+/** Hides timer 2 initialization */
 class TimerClass
 {
  protected:
 
 
  public:
-	void init(int frequency);	// Inits timer 2
+	void init(int frequency);	//!< Inits timer 2 at specified frequency
 };
 
 extern TimerClass Timer;

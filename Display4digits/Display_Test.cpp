@@ -25,13 +25,14 @@
 
 #include "Display_Test.h"
 
+/** init base class and internal counter */ 
 void Display_TestClass::init()
 {
 	MX4_C301Class::init();
 	j = 0;
 }
 
-// advances counters
+/** advances counters in decimal and hex */
 void Display_TestClass::increase_counters() {
 	if (j < 99) {
 		j++;
@@ -51,6 +52,7 @@ void Display_TestClass::increase_counters() {
 	}
 }
 
+/** test for write method */
 void Display_TestClass::decimal_counter() {
 	if (j < 25) {
 		write(j);
