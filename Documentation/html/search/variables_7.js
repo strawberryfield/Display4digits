@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['timer_100',['Timer',['../_timer_8cpp.html#acfa1f373cf78656bf7a7e23eb2283966',1,'Timer():&#160;Timer.cpp'],['../_timer_8h.html#acfa1f373cf78656bf7a7e23eb2283966',1,'Timer():&#160;Timer.cpp']]]
+  ['old_5fmillis_109',['old_millis',['../_display4digits_8ino.html#aa05c5615bae949c6c8f4e161c0f3a108',1,'Display4digits.ino']]]
 ];

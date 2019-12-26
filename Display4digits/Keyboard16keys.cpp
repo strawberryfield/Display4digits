@@ -1,5 +1,5 @@
 /// @file 
-/// Main Arduino entry point.
+/// Keyboard 16 keys class definition.
 ///
 /// @author
 /// copyright (c) 2019 Roberto Ceccarelli - Casasoft  
@@ -22,37 +22,29 @@
 /// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
 /// See the GNU General Public License for more details.
 /// 
-/// @name Wiring diagram
-/// @image html BaseDisplay_bb.jpg
-
 
 #include "Keyboard16keys.h"
-#include "Display_Test.h"
-#include "Timer.h"
-// #include "MX4_C301.h"
 
-uint32_t old_millis;	 //!< millis reference 
-
-/** the setup function runs once when you press reset or power the board */
-void setup() {
-	Display_Test.init();
-	Timer.init(250);	    //Base interrupt frequency 250Hz
-	Keyboard16keys.init();
-	old_millis = millis();
+void Keyboard16keysClass::init()
+{
+	init(PIN_A7);
 }
 
-/** the loop function runs over and over again until power down or reset */
-void loop() {
-	if (millis() - old_millis >= 100) {
-		old_millis = millis();
-		Display_Test.write(Keyboard16keys.readColumn());
-	}
+void Keyboard16keysClass::init(int input)
+{
+	inputPin = input;
 }
 
-/// timer compare interrupt service routine
-/// Called every 4 milliseconds
-ISR(TIMER1_COMPA_vect) {        
-	Display_Test.refresh();
+int Keyboard16keysClass::readColumn()
+{
+	int v = analogRead(inputPin);
+	if (v < 400) return 0;
+	if (v < 600) return 4;
+	if (v < 700) return 3;
+	if (v < 900) return 2;
+	return 1;
 }
 
+
+Keyboard16keysClass Keyboard16keys;
 

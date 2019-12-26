@@ -1,5 +1,5 @@
 /// @file 
-/// Main Arduino entry point.
+/// Keyboard 16 keys class definition.
 ///
 /// @author
 /// copyright (c) 2019 Roberto Ceccarelli - Casasoft  
@@ -22,37 +22,28 @@
 /// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
 /// See the GNU General Public License for more details.
 /// 
-/// @name Wiring diagram
-/// @image html BaseDisplay_bb.jpg
 
+#ifndef _KEYBOARD16KEYS_h
+#define _KEYBOARD16KEYS_h
 
-#include "Keyboard16keys.h"
-#include "Display_Test.h"
-#include "Timer.h"
-// #include "MX4_C301.h"
+#if defined(ARDUINO) && ARDUINO >= 100
+	#include "arduino.h"
+#else
+	#include "WProgram.h"
+#endif
 
-uint32_t old_millis;	 //!< millis reference 
+class Keyboard16keysClass
+{
+ protected:
+	 int inputPin = PIN_A7;		//!< default input on pin A7
 
-/** the setup function runs once when you press reset or power the board */
-void setup() {
-	Display_Test.init();
-	Timer.init(250);	    //Base interrupt frequency 250Hz
-	Keyboard16keys.init();
-	old_millis = millis();
-}
+ public:
+	void init();				//!< init on default pin
+	void init(int input);		//!< init on user pin
+	int	readColumn();			//!< return pressed row for current column
+};
 
-/** the loop function runs over and over again until power down or reset */
-void loop() {
-	if (millis() - old_millis >= 100) {
-		old_millis = millis();
-		Display_Test.write(Keyboard16keys.readColumn());
-	}
-}
+extern Keyboard16keysClass Keyboard16keys;
 
-/// timer compare interrupt service routine
-/// Called every 4 milliseconds
-ISR(TIMER1_COMPA_vect) {        
-	Display_Test.refresh();
-}
-
+#endif
 
