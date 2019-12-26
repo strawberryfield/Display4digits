@@ -2,7 +2,7 @@
 /// Main Arduino entry point.
 ///
 /// @author
-/// copyright (c) 2019 Roberto Ceccarelli - Casasoft
+/// copyright (c) 2019 Roberto Ceccarelli - Casasoft  
 /// http://strawberryfield.altervista.org 
 /// 
 /// @copyright

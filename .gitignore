@@ -341,3 +341,4 @@ healthchecksdb
 /Display4digits/Documentation/html
 /Documentation/html
 /Doxygen/tagfile
+/Doxygen/customdoxygen.css
