@@ -81,6 +81,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>7 segments 4 digits common cathodes LED display manager  
+ <a href="class_m_x4___c301_class.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_m_x4___c301_8h_source.html">MX4_C301.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for MX4_C301Class:</div>
@@ -109,6 +112,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a55fd4e3d0631a9ee2854015c68cf8ec4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_x4___c301_class.html#a55fd4e3d0631a9ee2854015c68cf8ec4">zero</a> ()</td></tr>
 <tr class="memdesc:a55fd4e3d0631a9ee2854015c68cf8ec4"><td class="mdescLeft">&#160;</td><td class="mdescRight">set display to 0  <a href="class_m_x4___c301_class.html#a55fd4e3d0631a9ee2854015c68cf8ec4">More...</a><br /></td></tr>
 <tr class="separator:a55fd4e3d0631a9ee2854015c68cf8ec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Multiplexing</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>Methods to multiplex digits </p>
+</div></td></tr>
+<tr class="memitem:ac30ecfb380f8820adef98f523b2d1783"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_x4___c301_class.html#ac30ecfb380f8820adef98f523b2d1783">refresh</a> (int active)</td></tr>
+<tr class="memdesc:ac30ecfb380f8820adef98f523b2d1783"><td class="mdescLeft">&#160;</td><td class="mdescRight">performs the digits multiplexing <br  />
+  <a href="class_m_x4___c301_class.html#ac30ecfb380f8820adef98f523b2d1783">More...</a><br /></td></tr>
+<tr class="separator:ac30ecfb380f8820adef98f523b2d1783"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5b1c9fe7b1d2ec1751459b3b3fa9e43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_x4___c301_class.html#ab5b1c9fe7b1d2ec1751459b3b3fa9e43">blinking</a> ()</td></tr>
+<tr class="memdesc:ab5b1c9fe7b1d2ec1751459b3b3fa9e43"><td class="mdescLeft">&#160;</td><td class="mdescRight">make blinking  <a href="class_m_x4___c301_class.html#ab5b1c9fe7b1d2ec1751459b3b3fa9e43">More...</a><br /></td></tr>
+<tr class="separator:ab5b1c9fe7b1d2ec1751459b3b3fa9e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">High level write region</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Methods to write data at high level </p>
 </div></td></tr>
@@ -160,38 +173,21 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:aad96c1b4ac390e7c57e1a415e1854746"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_x4___c301_class.html#aad96c1b4ac390e7c57e1a415e1854746">active</a></td></tr>
-<tr class="separator:aad96c1b4ac390e7c57e1a415e1854746"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c16aa90556bf2d78cd21cee17396db9"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_x4___c301_class.html#a7c16aa90556bf2d78cd21cee17396db9">cathodes</a> [<a class="el" href="_m_x4___c301_8h.html#a035c0b93babde37c8919064af8b67928">DISPLAY_SIZE</a>+1]</td></tr>
-<tr class="separator:a7c16aa90556bf2d78cd21cee17396db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a417fa37917c7698fb9be86ebbdd57f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_x4___c301_class.html#a1a417fa37917c7698fb9be86ebbdd57f">blink_status</a> [<a class="el" href="_m_x4___c301_8h.html#a035c0b93babde37c8919064af8b67928">DISPLAY_SIZE</a>+1]</td></tr>
 <tr class="separator:a1a417fa37917c7698fb9be86ebbdd57f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5636976dd9725d52dd0718322757a37d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_x4___c301_class.html#a5636976dd9725d52dd0718322757a37d">blink_counter</a> = 0</td></tr>
 <tr class="separator:a5636976dd9725d52dd0718322757a37d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc4142e39b01c1367a9b6dd5b72d5f76"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_x4___c301_class.html#afc4142e39b01c1367a9b6dd5b72d5f76">charmap</a> [16]</td></tr>
 <tr class="separator:afc4142e39b01c1367a9b6dd5b72d5f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
-Multiplexing</h2></td></tr>
-<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp9e55a2827f72f42f4bb3b98b0a669e91"></a>Methods to multiplex digits </p>
-</td></tr>
-<tr class="memitem:ab5b1c9fe7b1d2ec1751459b3b3fa9e43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_x4___c301_class.html#ab5b1c9fe7b1d2ec1751459b3b3fa9e43">blinking</a> ()</td></tr>
-<tr class="memdesc:ab5b1c9fe7b1d2ec1751459b3b3fa9e43"><td class="mdescLeft">&#160;</td><td class="mdescRight">make blinking  <a href="class_m_x4___c301_class.html#ab5b1c9fe7b1d2ec1751459b3b3fa9e43">More...</a><br /></td></tr>
-<tr class="separator:ab5b1c9fe7b1d2ec1751459b3b3fa9e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb4a14394a5de91bf2b06f3383ae89c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_m_x4___c301_class.html#aeb4a14394a5de91bf2b06f3383ae89c3">refresh</a> ()</td></tr>
-<tr class="memdesc:aeb4a14394a5de91bf2b06f3383ae89c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">performs the digits multiplexing <br  />
-  <a href="class_m_x4___c301_class.html#aeb4a14394a5de91bf2b06f3383ae89c3">More...</a><br /></td></tr>
-<tr class="separator:aeb4a14394a5de91bf2b06f3383ae89c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>7 segments 4 digits common cathodes LED display manager </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab5b1c9fe7b1d2ec1751459b3b3fa9e43"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab5b1c9fe7b1d2ec1751459b3b3fa9e43">&#9670;&nbsp;</a></span>blinking()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void MX4_C301Class::blinking </td>
@@ -200,11 +196,6 @@ Multiplexing</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>make blinking </p>
@@ -249,8 +240,8 @@ Multiplexing</h2></td></tr>
 
 </div>
 </div>
-<a id="aeb4a14394a5de91bf2b06f3383ae89c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb4a14394a5de91bf2b06f3383ae89c3">&#9670;&nbsp;</a></span>refresh()</h2>
+<a id="ac30ecfb380f8820adef98f523b2d1783"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac30ecfb380f8820adef98f523b2d1783">&#9670;&nbsp;</a></span>refresh()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -258,7 +249,8 @@ Multiplexing</h2></td></tr>
         <tr>
           <td class="memname">void MX4_C301Class::refresh </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>active</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -525,28 +517,6 @@ Multiplexing</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="aad96c1b4ac390e7c57e1a415e1854746"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad96c1b4ac390e7c57e1a415e1854746">&#9670;&nbsp;</a></span>active</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t MX4_C301Class::active</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a82ae89df43a3ff5c9899a0536a2abf37"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a82ae89df43a3ff5c9899a0536a2abf37">&#9670;&nbsp;</a></span>blink</h2>
 
@@ -637,31 +607,6 @@ Multiplexing</h2></td></tr>
 
 <p>default(255): Full light (not yet implemented) </p>
 
-</div>
-</div>
-<a id="a7c16aa90556bf2d78cd21cee17396db9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c16aa90556bf2d78cd21cee17396db9">&#9670;&nbsp;</a></span>cathodes</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t MX4_C301Class::cathodes[<a class="el" href="_m_x4___c301_8h.html#a035c0b93babde37c8919064af8b67928">DISPLAY_SIZE</a>+1]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">        12, PIN_A1, PIN_A2, PIN_A3, 11</div>
-<div class="line">    }</div>
-</div><!-- fragment -->
 </div>
 </div>
 <a id="afc4142e39b01c1367a9b6dd5b72d5f76"></a>

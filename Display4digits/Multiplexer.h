@@ -32,18 +32,20 @@
 	#include "WProgram.h"
 #endif
 
+///
+/// Generic multiplexer class
 class MultiplexerClass
 {
  protected:
-	 uint8_t* pinList;
-	 uint8_t size;
+	 uint8_t* pinList;			//!< List of used pins
+	 uint8_t size;				//!< Size of pins list
 
  public:
-	uint8_t active;
-	void init(uint8_t pins[], uint8_t muxsize);
-	void activateCurrent();
-	void deactivateCurrent();
-	void next();
+	uint8_t active;				//!< actual active pin
+	void init(uint8_t pins[], uint8_t muxsize);		//!< mux init
+	void activateCurrent();		//!< make current pin LOW
+	void deactivateCurrent();	//!< make current pin HIGH
+	void next();				//!< advances to next pin
 };
 
 extern MultiplexerClass Multiplexer;

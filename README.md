@@ -5,7 +5,7 @@ This solution contains a project to manage a 4 digits 7 segments common cathode 
 
 A class with samples and a simple .ino sketch is included
 
-## Cabling
+## Wiring
 
 This is the schema using an Arduino Nano
 
@@ -21,11 +21,8 @@ a back-end [Arduino IDE 1.8.10](https://www.arduino.cc/en/Main/Software)
 
 This environment create additional files and directories that can be ignored in the standard Arduino IDE.
 
-### Timer manager
-
-### Display manager
-
-### Test suite
+Code documentation, generated with Doxygen, is available in the Documentation folder of the repository
+or online at https://strawberryfield.github.io/Display4digits/Documentation/html/index.html
 
 
 ## License and Disclaimer

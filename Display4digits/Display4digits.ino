@@ -24,7 +24,7 @@
 /// 
 /// @name Wiring diagram
 /// @image html BaseDisplay_bb.jpg
-
+///
 
 #include "Multiplexer.h"
 #include "Keyboard16keys.h"
@@ -32,17 +32,18 @@
 #include "Timer.h"
 // #include "MX4_C301.h"
 
-uint32_t old_millis;	 //!< millis reference 
-
 /// @name Wiring
-/// Pin 11: Enable dots 
-/// Pin 12: Enable digit 1
-/// Pin A1: Enable digit 2
-/// Pin A2: Enable digit 3
-/// Pin A3: Enable digit 4
+/// Pin 11: Enable dots  
+/// Pin 12: Enable digit 1  
+/// Pin A1: Enable digit 2  
+/// Pin A2: Enable digit 3  
+/// Pin A3: Enable digit 4  
 uint8_t cathodes[] = {
 	12, PIN_A1, PIN_A2, PIN_A3, 11
 };
+
+uint32_t old_millis;	 //!< millis reference 
+
 
 /** the setup function runs once when you press reset or power the board */
 void setup() {

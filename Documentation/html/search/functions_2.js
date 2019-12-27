@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['decimal_5fcounter_80',['decimal_counter',['../class_display___test_class.html#a6a78e8d74252b23e5a3463a90540f7ff',1,'Display_TestClass']]]
+  ['clear_92',['clear',['../class_m_x4___c301_class.html#aee99aac15ebe42b16c4aa37298087e15',1,'MX4_C301Class']]]
 ];

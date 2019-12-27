@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['timer_57',['Timer',['../_timer_8cpp.html#acfa1f373cf78656bf7a7e23eb2283966',1,'Timer():&#160;Timer.cpp'],['../_timer_8h.html#acfa1f373cf78656bf7a7e23eb2283966',1,'Timer():&#160;Timer.cpp']]],
-  ['timer_2ecpp_58',['Timer.cpp',['../_timer_8cpp.html',1,'']]],
-  ['timer_2eh_59',['Timer.h',['../_timer_8h.html',1,'']]],
-  ['timerclass_60',['TimerClass',['../class_timer_class.html',1,'']]]
+  ['readcolumn_52',['readColumn',['../class_keyboard16keys_class.html#aa4eac88b22605e6b90dcba27d39e95f8',1,'Keyboard16keysClass']]],
+  ['refresh_53',['refresh',['../class_m_x4___c301_class.html#ac30ecfb380f8820adef98f523b2d1783',1,'MX4_C301Class']]],
+  ['reset_5fblinking_54',['reset_blinking',['../class_m_x4___c301_class.html#acdee339545c6eabed85d181db058bea8',1,'MX4_C301Class']]]
 ];

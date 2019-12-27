@@ -80,16 +80,22 @@ $(function() {
 <div class="title">Display4digits.ino File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="_keyboard16keys_8h_source.html">Keyboard16keys.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="_multiplexer_8h_source.html">Multiplexer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_keyboard16keys_8h_source.html">Keyboard16keys.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_display___test_8h_source.html">Display_Test.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_timer_8h_source.html">Timer.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
-Wiring diagram</h2></td></tr>
-<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp3d8c38c6ffc6d821c710271aa4856c5c"></a></p><div class="image">
-<img src="BaseDisplay_bb.jpg" alt=""/>
-</div>
- </td></tr>
+Wiring</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp441b65c8a62ed7904574ee78c84b0963"></a>Pin 11: Enable dots <br  />
+ Pin 12: Enable digit 1 <br  />
+ Pin A1: Enable digit 2 <br  />
+ Pin A2: Enable digit 3 <br  />
+ Pin A3: Enable digit 4 <br  />
+ </p>
+</td></tr>
+<tr class="memitem:a16e761844afcf6cd8edc0cfcbc1489f8"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_display4digits_8ino.html#a16e761844afcf6cd8edc0cfcbc1489f8">cathodes</a> []</td></tr>
+<tr class="separator:a16e761844afcf6cd8edc0cfcbc1489f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa05c5615bae949c6c8f4e161c0f3a108"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_display4digits_8ino.html#aa05c5615bae949c6c8f4e161c0f3a108">old_millis</a></td></tr>
 <tr class="memdesc:aa05c5615bae949c6c8f4e161c0f3a108"><td class="mdescLeft">&#160;</td><td class="mdescRight">millis reference  <a href="_display4digits_8ino.html#aa05c5615bae949c6c8f4e161c0f3a108">More...</a><br /></td></tr>
 <tr class="separator:aa05c5615bae949c6c8f4e161c0f3a108"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,6 +172,23 @@ Wiring diagram</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="a16e761844afcf6cd8edc0cfcbc1489f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16e761844afcf6cd8edc0cfcbc1489f8">&#9670;&nbsp;</a></span>cathodes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t cathodes[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    12, PIN_A1, PIN_A2, PIN_A3, 11</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="aa05c5615bae949c6c8f4e161c0f3a108"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa05c5615bae949c6c8f4e161c0f3a108">&#9670;&nbsp;</a></span>old_millis</h2>
 

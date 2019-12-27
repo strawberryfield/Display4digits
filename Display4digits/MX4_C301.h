@@ -68,7 +68,7 @@
 #define MINUS	B11000000
 
 /// 
-/// 7 segments 4 digits common cathodes LED display manager
+///@brief 7 segments 4 digits common cathodes LED display manager
 class MX4_C301Class
 {
 protected:
