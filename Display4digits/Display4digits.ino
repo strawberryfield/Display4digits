@@ -26,6 +26,7 @@
 /// @image html BaseDisplay_bb.jpg
 
 
+#include "Multiplexer.h"
 #include "Keyboard16keys.h"
 #include "Display_Test.h"
 #include "Timer.h"
@@ -33,26 +34,43 @@
 
 uint32_t old_millis;	 //!< millis reference 
 
+/// @name Wiring
+/// Pin 11: Enable dots 
+/// Pin 12: Enable digit 1
+/// Pin A1: Enable digit 2
+/// Pin A2: Enable digit 3
+/// Pin A3: Enable digit 4
+uint8_t cathodes[] = {
+	12, PIN_A1, PIN_A2, PIN_A3, 11
+};
+
 /** the setup function runs once when you press reset or power the board */
 void setup() {
 	Display_Test.init();
 	Timer.init(250);	    //Base interrupt frequency 250Hz
+	Multiplexer.init(cathodes, DISPLAY_SIZE + 1);
 	Keyboard16keys.init();
 	old_millis = millis();
+//	Display_Test.write(12345);
 }
 
 /** the loop function runs over and over again until power down or reset */
 void loop() {
-	if (millis() - old_millis >= 100) {
+	if (millis() - old_millis >= 500) {
 		old_millis = millis();
 		Display_Test.write(Keyboard16keys.readColumn());
+//		Display_Test.increase_counters();
 	}
 }
 
 /// timer compare interrupt service routine
 /// Called every 4 milliseconds
-ISR(TIMER1_COMPA_vect) {        
-	Display_Test.refresh();
+ISR(TIMER1_COMPA_vect) { 
+	Display_Test.blinking();
+	Multiplexer.deactivateCurrent();
+	Multiplexer.next();
+	Display_Test.refresh(Multiplexer.active);
+	Multiplexer.activateCurrent();
 }
 
 

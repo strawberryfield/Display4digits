@@ -32,11 +32,6 @@ void MX4_C301Class::init()
 {
     DDRD = DDRD | DMASK; // sets pins 2 to 6 as outputs
     DDRB = DDRB | B00011111; // sets pins 8 to 12 as outputs
-    pinMode(A1, OUTPUT);
-    pinMode(A2, OUTPUT);
-    pinMode(A3, OUTPUT);
-
-    active = 0;
 
     clear();
 }
@@ -103,32 +98,25 @@ void MX4_C301Class::writeChar(char digit) {
 #pragma region multiplexing
 
 // performs the digits multiplexing
-void  MX4_C301Class::refresh() {
-    blink_counter++;
-    if (blink_counter == blink_speed) blinking();
-    digitalWrite(cathodes[active], LOW);
-    if (active == DISPLAY_SIZE) {
-        active = 0;
-    }
-    else {
-        active++;
-    }
+void  MX4_C301Class::refresh(int active) {
     if (active == DISPLAY_SIZE) {
         writeDigit(dots, blink_status[DISPLAY_SIZE]);
     }
     else {
         writeChar(display[active], blink_status[active]);
     }
-    digitalWrite(cathodes[active], HIGH);
 }
 
 // make blinking
 void MX4_C301Class::blinking()
 {
-    blink_counter = 0;
-    for (int j = 0; j <= DISPLAY_SIZE; j++) {
-        blink_status[j] ^= blink[j];
-        blink_status[j] |= ~blink[j];
+    blink_counter++;
+    if (blink_counter >= blink_speed) {
+        blink_counter = 0;
+        for (int j = 0; j <= DISPLAY_SIZE; j++) {
+            blink_status[j] ^= blink[j];
+            blink_status[j] |= ~blink[j];
+        }
     }
 }
 

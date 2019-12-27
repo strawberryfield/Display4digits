@@ -32,23 +32,17 @@
 #include "WProgram.h"
 #endif
 
-// Wiring
-// Display segments are arranged in a way that allow port write
-// Pin  2: Segment C
-// Pin  3: Segment D
-// Pin  4: Segment E
-// Pin  5: Segment F
-// Pin  6: Segment G
-// Pin  7:  *Free, future use*
-// Pin  8: Segment A
-// Pin  9: Segment B
-
-// Pin 10: Master brightness
-// Pin 11: Enable dots (in pwm)
-// Pin 12: Enable digit 1
-// Pin A1: Enable digit 2
-// Pin A2: Enable digit 3
-// Pin A3: Enable digit 4
+///@name Wiring
+/// Display segments are arranged in a way that allow port write
+/// Pin  2: Segment C
+/// Pin  3: Segment D
+/// Pin  4: Segment E
+/// Pin  5: Segment F
+/// Pin  6: Segment G
+/// Pin  7:  *Free, future use*
+/// Pin  8: Segment A
+/// Pin  9: Segment B
+///
 
 #define DISPLAY_SIZE 4
 #define DMASK B01111100
@@ -73,21 +67,13 @@
 #define BLANK	B10000000
 #define MINUS	B11000000
 
+/// 
+/// 7 segments 4 digits common cathodes LED display manager
 class MX4_C301Class
 {
 protected:
-	uint8_t active;
-	uint8_t cathodes[DISPLAY_SIZE + 1] = {
-		12, PIN_A1, PIN_A2, PIN_A3, 11
-	};
 	uint8_t blink_status[DISPLAY_SIZE + 1];
 	int blink_counter = 0;
-
-	/// @name Multiplexing
-	/// Methods to multiplex digits
-	/// @{
-	void blinking();		//!< make blinking
-	/// @} 
 
 	/// @name Low level write methods
 	/// Methods to write data at low level
@@ -137,7 +123,8 @@ public:
 	/// @name Multiplexing
 	/// Methods to multiplex digits
 	/// @{
-	void refresh();						//!< performs the digits multiplexing	
+	void refresh(int active);			//!< performs the digits multiplexing	
+	void blinking();					//!< make blinking
 	///@}
 
 	/// @name High level write region
