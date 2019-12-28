@@ -66,6 +66,10 @@
 
 #define BLANK	B10000000
 #define MINUS	B11000000
+#define LOWER_C	B11011000
+#define LOWER_R B11010000
+#define ASTERISK	B11011100
+#define SHARP	B11001000
 
 /// 
 ///@brief 7 segments 4 digits common cathodes LED display manager

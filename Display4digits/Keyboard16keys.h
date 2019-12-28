@@ -27,20 +27,42 @@
 #define _KEYBOARD16KEYS_h
 
 #if defined(ARDUINO) && ARDUINO >= 100
-	#include "arduino.h"
+#include "arduino.h"
 #else
-	#include "WProgram.h"
+#include "WProgram.h"
 #endif
 
+/// Rows values detected   
+/// 1009    
+///  507  
+///  338  
+///  253  
+#define ROW1EDGE	750
+#define ROW2EDGE	420
+#define ROW3EDGE	295
+#define ROW4EDGE	120
+
+///
+///@brief 16 keys keypad manager
 class Keyboard16keysClass
 {
- protected:
-	 int inputPin = PIN_A7;		//!< default input on pin A7
+protected:
+	int inputPin = PIN_A7;		//!< default input on pin A7
+	int	readColumn();			//!< return pressed row for current column
+	char keymap[4][4] = {  
+		{ '1', '2', '3', 'A'},  
+		{ '4', '5', '6', 'B'},  
+		{ '7', '8', '9', 'C'},  
+		{ '*', '0', '#', 'D'}  
+	};							//!< keys map
 
- public:
+public:
+	uint8_t currentKeyRow;		//!< active key row
+	uint8_t currentKeyCol;		//!< active key column
+	char currentKey();			//!< active key
 	void init();				//!< init on default pin
 	void init(int input);		//!< init on user pin
-	int	readColumn();			//!< return pressed row for current column
+	void scanKey(uint8_t col);	//!< keyboard scanner
 };
 
 extern Keyboard16keysClass Keyboard16keys;

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['blank_129',['BLANK',['../_m_x4___c301_8h.html#a5aebfba92373e0dc8a76d272bcd8e85d',1,'MX4_C301.h']]],
-  ['bmask_130',['BMASK',['../_m_x4___c301_8h.html#a933b5c9d9b164ecdc2f934c76a5aef84',1,'MX4_C301.h']]]
+  ['asterisk_151',['ASTERISK',['../_m_x4___c301_8h.html#a0ff582e3a0d6ebcd685ffdcbe8f16aa3',1,'MX4_C301.h']]]
 ];

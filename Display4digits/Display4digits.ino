@@ -53,14 +53,15 @@ void setup() {
 	Keyboard16keys.init();
 	old_millis = millis();
 //	Display_Test.write(12345);
+	Display_Test.dots = LED_67;
 }
 
 /** the loop function runs over and over again until power down or reset */
 void loop() {
-	if (millis() - old_millis >= 500) {
+	if (millis() - old_millis >= 100) {
 		old_millis = millis();
-		Display_Test.write(Keyboard16keys.readColumn());
-//		Display_Test.increase_counters();
+//		Display_Test.rowcol(Keyboard16keys.currentKeyRow, Keyboard16keys.currentKeyCol);
+		Display_Test.showKeyboard(Keyboard16keys);
 	}
 }
 
@@ -72,6 +73,7 @@ ISR(TIMER1_COMPA_vect) {
 	Multiplexer.next();
 	Display_Test.refresh(Multiplexer.active);
 	Multiplexer.activateCurrent();
+	Keyboard16keys.scanKey(Multiplexer.active);
 }
 
 

@@ -64,5 +64,42 @@ void Display_TestClass::decimal_counter() {
 	}
 }
 
+void Display_TestClass::rowcol(uint8_t row, uint8_t col)
+{
+	if (row > 0) {
+		display[0] = LOWER_R;
+		display[1] = row;
+		display[2] = LOWER_C;
+		display[3] = col;
+	}
+	else {
+		clear();
+	}
+}
+
+void Display_TestClass::showKeyboard(Keyboard16keysClass kb)
+{
+	display[0] = kb.currentKeyRow;
+	display[1] = kb.currentKeyCol;
+	if (kb.currentKeyRow > 0) {
+		char c = kb.currentKey();
+		if (c >= '0' && c <= '9') {
+			display[3] = c - '0';
+		}
+		else if (c >= 'A' && c <= 'D') {
+			display[3] = c - 'A' + 10;
+		}
+		else if (c == '*') {
+			display[3] = ASTERISK;
+		}
+		else if (c == '#') {
+			display[3] = SHARP;
+		}
+	}
+	else {
+		display[3] = BLANK;
+	}
+}
+
 Display_TestClass Display_Test;
 

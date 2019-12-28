@@ -33,6 +33,7 @@
 #endif
 
 #include "MX4_C301.h"
+#include "Keyboard16keys.h"
 
 /** Display test suite */
 class Display_TestClass : public MX4_C301Class
@@ -44,6 +45,8 @@ class Display_TestClass : public MX4_C301Class
 	 void init();
 	 void increase_counters();
 	 void decimal_counter();
+	 void rowcol(uint8_t row, uint8_t col);
+	 void showKeyboard(Keyboard16keysClass kb);
 };
 
 extern Display_TestClass Display_Test;

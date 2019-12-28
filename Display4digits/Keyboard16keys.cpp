@@ -33,16 +33,41 @@ void Keyboard16keysClass::init()
 void Keyboard16keysClass::init(int input)
 {
 	inputPin = input;
+	currentKeyCol = 0;
+	currentKeyRow = 0;
+}
+
+void Keyboard16keysClass::scanKey(uint8_t col)
+{
+	if (col < 4) {
+		uint8_t row = readColumn();
+		if (row > 0) {
+			currentKeyCol = col + 1;
+			currentKeyRow = row;
+		}
+		else if (currentKeyCol == col + 1) {
+			currentKeyCol = 0;
+			currentKeyRow = 0;
+		}
+	}
 }
 
 int Keyboard16keysClass::readColumn()
 {
 	int v = analogRead(inputPin);
-	if (v < 400) return 0;
-	if (v < 600) return 4;
-	if (v < 700) return 3;
-	if (v < 900) return 2;
-	return 1;
+	if (v < ROW4EDGE) return 0;
+	if (v > ROW1EDGE) return 1;
+	if (v > ROW2EDGE) return 2;
+	if (v > ROW3EDGE) return 3;
+	return 4;
+}
+
+char Keyboard16keysClass::currentKey()
+{
+	if (currentKeyCol == 0) {
+		return 0;
+	}
+	return keymap[currentKeyRow - 1][currentKeyCol - 1];
 }
 
 
