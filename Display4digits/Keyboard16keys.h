@@ -49,12 +49,7 @@ class Keyboard16keysClass
 protected:
 	int inputPin = PIN_A7;		//!< default input on pin A7
 	int	readColumn();			//!< return pressed row for current column
-	char keymap[4][4] = {  
-		{ '1', '2', '3', 'A'},  
-		{ '4', '5', '6', 'B'},  
-		{ '7', '8', '9', 'C'},  
-		{ '*', '0', '#', 'D'}  
-	};							//!< keys map
+	static const PROGMEM char keymap[4][4];			//!< keys map
 
 public:
 	uint8_t currentKeyRow;		//!< active key row

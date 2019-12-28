@@ -71,6 +71,8 @@
 #define ASTERISK	B11011100
 #define SHARP	B11001000
 
+#define CHARMAP_SIZE	16
+
 /// 
 ///@brief 7 segments 4 digits common cathodes LED display manager
 class MX4_C301Class
@@ -88,24 +90,7 @@ protected:
 	void writeChar(char digit, uint8_t blink_mask);			//!< writes built-incharacter to output ports with blinking mask
 	/// @} 
 
-	uint8_t charmap[16] = {
-		B00111111,  //!<0
-		B00000110,	//!<1
-		B01011011,	//!<2
-		B01001111,	//!<3
-		B01100110,	//!<4
-		B01101101,	//!<5
-		B01111101,	//!<6
-		B00000111,	//!<7
-		B01111111,	//!<8
-		B01101111,	//!<9
-		B01110111,  //!<A
-		B01111100,	//!<b
-		B00111001,	//!<C
-		B01011110,	//!<d
-		B01111001,	//!<E
-		B01110001	//!<F
-	};
+	const static PROGMEM char charmap[CHARMAP_SIZE];
 
 public:
 	char display[DISPLAY_SIZE];			//!< Display storage area

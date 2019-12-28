@@ -84,7 +84,7 @@ void MX4_C301Class::writeChar(char digit, uint8_t blink_mask) {
         writeDigit(digit, blink_mask);
     }
     else {
-        writeDigit(charmap[digit], blink_mask);
+        writeDigit(pgm_read_byte_near(charmap+digit), blink_mask);
     }
 }
 
@@ -183,6 +183,24 @@ void MX4_C301Class::set_all_blink(uint8_t blink_mask) {
 
 #pragma endregion
 
+const PROGMEM char MX4_C301Class::charmap[CHARMAP_SIZE] = {
+    B00111111,  //!<0
+    B00000110,	//!<1
+    B01011011,	//!<2
+    B01001111,	//!<3
+    B01100110,	//!<4
+    B01101101,	//!<5
+    B01111101,	//!<6
+    B00000111,	//!<7
+    B01111111,	//!<8
+    B01101111,	//!<9
+    B01110111,  //!<A
+    B01111100,	//!<b
+    B00111001,	//!<C
+    B01011110,	//!<d
+    B01111001,	//!<E
+    B01110001	//!<F
+};
 
 // MX4_C301Class MX4_C301;
 

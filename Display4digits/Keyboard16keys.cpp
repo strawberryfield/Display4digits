@@ -37,6 +37,13 @@ void Keyboard16keysClass::init(int input)
 	currentKeyRow = 0;
 }
 
+const PROGMEM char Keyboard16keysClass::keymap[4][4] = {
+		{ '1', '2', '3', 'A'},
+		{ '4', '5', '6', 'B'},
+		{ '7', '8', '9', 'C'},
+		{ '*', '0', '#', 'D'}
+};
+
 void Keyboard16keysClass::scanKey(uint8_t col)
 {
 	if (col < 4) {
@@ -67,7 +74,7 @@ char Keyboard16keysClass::currentKey()
 	if (currentKeyCol == 0) {
 		return 0;
 	}
-	return keymap[currentKeyRow - 1][currentKeyCol - 1];
+	return pgm_read_byte(&(keymap[currentKeyRow - 1][currentKeyCol - 1]));
 }
 
 
