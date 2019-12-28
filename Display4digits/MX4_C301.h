@@ -70,8 +70,10 @@
 #define LOWER_R B11010000
 #define ASTERISK	B11011100
 #define SHARP	B11001000
+#define DEGREES	B11100011
+#define QUOTES	B10100010
 
-#define CHARMAP_SIZE	16
+#define CHARMAP_SIZE	36
 
 /// 
 ///@brief 7 segments 4 digits common cathodes LED display manager
