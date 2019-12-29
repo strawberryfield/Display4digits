@@ -42,6 +42,9 @@
 #define ROW3EDGE	295
 #define ROW4EDGE	120
 
+// Empty char
+#define	BLANK	B10000000
+
 ///
 ///@brief 16 keys keypad manager
 class Keyboard16keysClass
@@ -51,6 +54,16 @@ protected:
 	int	readColumn();			//!< return pressed row for current column
 	static const PROGMEM char keymap[4][4];			//!< keys map
 
+	/// @name multidigit numeric input
+	/// Numeric input on display buffer
+	/// @{
+	char* inputBuffer;			//!< display buffer for multidigit input
+	uint8_t inputBufferSize;	//!< size of display buffer
+	uint8_t inputMaxSize;		//!< input max size
+	int inputPos;				//!< current input position
+	char inputLastKey;			//!< last key pressed (0 if none)
+	/// @} 
+
 public:
 	uint8_t currentKeyRow;		//!< active key row
 	uint8_t currentKeyCol;		//!< active key column
@@ -58,9 +71,16 @@ public:
 	void init();				//!< init on default pin
 	void init(int input);		//!< init on user pin
 	void scanKey(uint8_t col);	//!< keyboard scanner
+
+	/// @name multidigit numeric input
+	/// Numeric input on display buffer
+	/// @{
+	void numericInputInit(char buffer[], uint8_t bufferSize);					//!< multidigit numeric input init routine
+	void numericInputInit(char buffer[], uint8_t bufferSize, uint8_t maxLen);	//!< multidigit numeric input init routine
+	char numericInput();														//!< multidigit numeric input
+	/// @} 
 };
 
 extern Keyboard16keysClass Keyboard16keys;
 
 #endif
-

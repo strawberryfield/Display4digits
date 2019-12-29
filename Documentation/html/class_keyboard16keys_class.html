@@ -77,6 +77,7 @@ $(function() {
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="class_keyboard16keys_class-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Keyboard16keysClass Class Reference</div>  </div>
@@ -123,9 +124,41 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ae8949f1ed36ecc48bb9bb65bcb396edf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard16keys_class.html#ae8949f1ed36ecc48bb9bb65bcb396edf">inputPin</a> = PIN_A7</td></tr>
 <tr class="memdesc:ae8949f1ed36ecc48bb9bb65bcb396edf"><td class="mdescLeft">&#160;</td><td class="mdescRight">default input on pin A7  <a href="class_keyboard16keys_class.html#ae8949f1ed36ecc48bb9bb65bcb396edf">More...</a><br /></td></tr>
 <tr class="separator:ae8949f1ed36ecc48bb9bb65bcb396edf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae095e54c824286fb9cc5698953e4bd98"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard16keys_class.html#ae095e54c824286fb9cc5698953e4bd98">keymap</a> [4][4]</td></tr>
-<tr class="memdesc:ae095e54c824286fb9cc5698953e4bd98"><td class="mdescLeft">&#160;</td><td class="mdescRight">keys map  <a href="class_keyboard16keys_class.html#ae095e54c824286fb9cc5698953e4bd98">More...</a><br /></td></tr>
-<tr class="separator:ae095e54c824286fb9cc5698953e4bd98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Static Protected Attributes</h2></td></tr>
+<tr class="memitem:a0cfb00d9e6ae5620ba10f7f1a445fbc8"><td class="memItemLeft" align="right" valign="top">static const PROGMEM char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard16keys_class.html#a0cfb00d9e6ae5620ba10f7f1a445fbc8">keymap</a> [4][4]</td></tr>
+<tr class="memdesc:a0cfb00d9e6ae5620ba10f7f1a445fbc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">keys map  <a href="class_keyboard16keys_class.html#a0cfb00d9e6ae5620ba10f7f1a445fbc8">More...</a><br /></td></tr>
+<tr class="separator:a0cfb00d9e6ae5620ba10f7f1a445fbc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+multidigit numeric input</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp5f586130fc9e10b3567d3b87e04267c5"></a>Numeric input on display buffer </p>
+</td></tr>
+<tr class="memitem:aae45cf10dd6a6b4f176e26fb54863f0b"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard16keys_class.html#aae45cf10dd6a6b4f176e26fb54863f0b">inputBuffer</a></td></tr>
+<tr class="memdesc:aae45cf10dd6a6b4f176e26fb54863f0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">display buffer for multidigit input  <a href="class_keyboard16keys_class.html#aae45cf10dd6a6b4f176e26fb54863f0b">More...</a><br /></td></tr>
+<tr class="separator:aae45cf10dd6a6b4f176e26fb54863f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4258aca7da9cf1fe3ff0913c2dedc56"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard16keys_class.html#ac4258aca7da9cf1fe3ff0913c2dedc56">inputBufferSize</a></td></tr>
+<tr class="memdesc:ac4258aca7da9cf1fe3ff0913c2dedc56"><td class="mdescLeft">&#160;</td><td class="mdescRight">size of display buffer  <a href="class_keyboard16keys_class.html#ac4258aca7da9cf1fe3ff0913c2dedc56">More...</a><br /></td></tr>
+<tr class="separator:ac4258aca7da9cf1fe3ff0913c2dedc56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b110a7204df4db18c702b94b6598e1a"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard16keys_class.html#a7b110a7204df4db18c702b94b6598e1a">inputMaxSize</a></td></tr>
+<tr class="memdesc:a7b110a7204df4db18c702b94b6598e1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">input max size  <a href="class_keyboard16keys_class.html#a7b110a7204df4db18c702b94b6598e1a">More...</a><br /></td></tr>
+<tr class="separator:a7b110a7204df4db18c702b94b6598e1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38447ff8a66df9875342f07d76cba043"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard16keys_class.html#a38447ff8a66df9875342f07d76cba043">inputPos</a></td></tr>
+<tr class="memdesc:a38447ff8a66df9875342f07d76cba043"><td class="mdescLeft">&#160;</td><td class="mdescRight">current input position  <a href="class_keyboard16keys_class.html#a38447ff8a66df9875342f07d76cba043">More...</a><br /></td></tr>
+<tr class="separator:a38447ff8a66df9875342f07d76cba043"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae613f7044bd3888c0d4e98ad332d7763"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard16keys_class.html#ae613f7044bd3888c0d4e98ad332d7763">inputLastKey</a></td></tr>
+<tr class="memdesc:ae613f7044bd3888c0d4e98ad332d7763"><td class="mdescLeft">&#160;</td><td class="mdescRight">last key pressed (0 if none)  <a href="class_keyboard16keys_class.html#ae613f7044bd3888c0d4e98ad332d7763">More...</a><br /></td></tr>
+<tr class="separator:ae613f7044bd3888c0d4e98ad332d7763"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c6cbd697bcfa79e49ea3d8cd86d2041"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard16keys_class.html#a7c6cbd697bcfa79e49ea3d8cd86d2041">numericInputInit</a> (char buffer[], uint8_t bufferSize)</td></tr>
+<tr class="memdesc:a7c6cbd697bcfa79e49ea3d8cd86d2041"><td class="mdescLeft">&#160;</td><td class="mdescRight">multidigit numeric input init routine  <a href="class_keyboard16keys_class.html#a7c6cbd697bcfa79e49ea3d8cd86d2041">More...</a><br /></td></tr>
+<tr class="separator:a7c6cbd697bcfa79e49ea3d8cd86d2041"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8466c1959c4bda2aa2e66ee170c9e95d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard16keys_class.html#a8466c1959c4bda2aa2e66ee170c9e95d">numericInputInit</a> (char buffer[], uint8_t bufferSize, uint8_t maxLen)</td></tr>
+<tr class="memdesc:a8466c1959c4bda2aa2e66ee170c9e95d"><td class="mdescLeft">&#160;</td><td class="mdescRight">multidigit numeric input init routine  <a href="class_keyboard16keys_class.html#a8466c1959c4bda2aa2e66ee170c9e95d">More...</a><br /></td></tr>
+<tr class="separator:a8466c1959c4bda2aa2e66ee170c9e95d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21533078cc053a0d929d07731c2e131d"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_keyboard16keys_class.html#a21533078cc053a0d929d07731c2e131d">numericInput</a> ()</td></tr>
+<tr class="memdesc:a21533078cc053a0d929d07731c2e131d"><td class="mdescLeft">&#160;</td><td class="mdescRight">multidigit numeric input  <a href="class_keyboard16keys_class.html#a21533078cc053a0d929d07731c2e131d">More...</a><br /></td></tr>
+<tr class="separator:a21533078cc053a0d929d07731c2e131d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>16 keys keypad manager </p>
@@ -185,6 +218,91 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>init on user pin </p>
+
+</div>
+</div>
+<a id="a21533078cc053a0d929d07731c2e131d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21533078cc053a0d929d07731c2e131d">&#9670;&nbsp;</a></span>numericInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char Keyboard16keysClass::numericInput </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>multidigit numeric input </p>
+
+</div>
+</div>
+<a id="a7c6cbd697bcfa79e49ea3d8cd86d2041"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c6cbd697bcfa79e49ea3d8cd86d2041">&#9670;&nbsp;</a></span>numericInputInit() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Keyboard16keysClass::numericInputInit </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>buffer</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>bufferSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>multidigit numeric input init routine </p>
+
+</div>
+</div>
+<a id="a8466c1959c4bda2aa2e66ee170c9e95d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8466c1959c4bda2aa2e66ee170c9e95d">&#9670;&nbsp;</a></span>numericInputInit() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Keyboard16keysClass::numericInputInit </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>buffer</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>bufferSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>maxLen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>multidigit numeric input init routine </p>
 
 </div>
 </div>
@@ -268,6 +386,102 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aae45cf10dd6a6b4f176e26fb54863f0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae45cf10dd6a6b4f176e26fb54863f0b">&#9670;&nbsp;</a></span>inputBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* Keyboard16keysClass::inputBuffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>display buffer for multidigit input </p>
+
+</div>
+</div>
+<a id="ac4258aca7da9cf1fe3ff0913c2dedc56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4258aca7da9cf1fe3ff0913c2dedc56">&#9670;&nbsp;</a></span>inputBufferSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Keyboard16keysClass::inputBufferSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>size of display buffer </p>
+
+</div>
+</div>
+<a id="ae613f7044bd3888c0d4e98ad332d7763"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae613f7044bd3888c0d4e98ad332d7763">&#9670;&nbsp;</a></span>inputLastKey</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char Keyboard16keysClass::inputLastKey</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>last key pressed (0 if none) </p>
+
+</div>
+</div>
+<a id="a7b110a7204df4db18c702b94b6598e1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b110a7204df4db18c702b94b6598e1a">&#9670;&nbsp;</a></span>inputMaxSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Keyboard16keysClass::inputMaxSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>input max size </p>
+
+</div>
+</div>
 <a id="ae8949f1ed36ecc48bb9bb65bcb396edf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae8949f1ed36ecc48bb9bb65bcb396edf">&#9670;&nbsp;</a></span>inputPin</h2>
 
@@ -292,8 +506,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae095e54c824286fb9cc5698953e4bd98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae095e54c824286fb9cc5698953e4bd98">&#9670;&nbsp;</a></span>keymap</h2>
+<a id="a38447ff8a66df9875342f07d76cba043"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38447ff8a66df9875342f07d76cba043">&#9670;&nbsp;</a></span>inputPos</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -302,7 +516,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">char Keyboard16keysClass::keymap[4][4]</td>
+          <td class="memname">int Keyboard16keysClass::inputPos</td>
         </tr>
       </table>
   </td>
@@ -311,12 +525,36 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {  </div>
-<div class="line">        { <span class="charliteral">&#39;1&#39;</span>, <span class="charliteral">&#39;2&#39;</span>, <span class="charliteral">&#39;3&#39;</span>, <span class="charliteral">&#39;A&#39;</span>},  </div>
-<div class="line">        { <span class="charliteral">&#39;4&#39;</span>, <span class="charliteral">&#39;5&#39;</span>, <span class="charliteral">&#39;6&#39;</span>, <span class="charliteral">&#39;B&#39;</span>},  </div>
-<div class="line">        { <span class="charliteral">&#39;7&#39;</span>, <span class="charliteral">&#39;8&#39;</span>, <span class="charliteral">&#39;9&#39;</span>, <span class="charliteral">&#39;C&#39;</span>},  </div>
-<div class="line">        { <span class="charliteral">&#39;*&#39;</span>, <span class="charliteral">&#39;0&#39;</span>, <span class="charliteral">&#39;#&#39;</span>, <span class="charliteral">&#39;D&#39;</span>}  </div>
-<div class="line">    }</div>
+
+<p>current input position </p>
+
+</div>
+</div>
+<a id="a0cfb00d9e6ae5620ba10f7f1a445fbc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cfb00d9e6ae5620ba10f7f1a445fbc8">&#9670;&nbsp;</a></span>keymap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const PROGMEM char Keyboard16keysClass::keymap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">        { <span class="charliteral">&#39;1&#39;</span>, <span class="charliteral">&#39;2&#39;</span>, <span class="charliteral">&#39;3&#39;</span>, <span class="charliteral">&#39;A&#39;</span>},</div>
+<div class="line">        { <span class="charliteral">&#39;4&#39;</span>, <span class="charliteral">&#39;5&#39;</span>, <span class="charliteral">&#39;6&#39;</span>, <span class="charliteral">&#39;B&#39;</span>},</div>
+<div class="line">        { <span class="charliteral">&#39;7&#39;</span>, <span class="charliteral">&#39;8&#39;</span>, <span class="charliteral">&#39;9&#39;</span>, <span class="charliteral">&#39;C&#39;</span>},</div>
+<div class="line">        { <span class="charliteral">&#39;*&#39;</span>, <span class="charliteral">&#39;0&#39;</span>, <span class="charliteral">&#39;#&#39;</span>, <span class="charliteral">&#39;D&#39;</span>}</div>
+<div class="line">}</div>
 </div><!-- fragment -->
 <p>keys map </p>
 

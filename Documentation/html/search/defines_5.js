@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['row1edge_166',['ROW1EDGE',['../_keyboard16keys_8h.html#a13ed3c2672740706d380e51ede18734c',1,'Keyboard16keys.h']]],
-  ['row2edge_167',['ROW2EDGE',['../_keyboard16keys_8h.html#ace53f396db4969fee100d0d945229ebc',1,'Keyboard16keys.h']]],
-  ['row3edge_168',['ROW3EDGE',['../_keyboard16keys_8h.html#af9c299e300d035fb419a90f451279bf1',1,'Keyboard16keys.h']]],
-  ['row4edge_169',['ROW4EDGE',['../_keyboard16keys_8h.html#ae03d0e32e4d73e83451a47aba75a3ee0',1,'Keyboard16keys.h']]]
+  ['minus_184',['MINUS',['../_m_x4___c301_8h.html#a5381a445a1e4bdc36460151d82eed95a',1,'MX4_C301.h']]]
 ];

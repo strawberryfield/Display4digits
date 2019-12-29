@@ -48,12 +48,13 @@ uint32_t old_millis;	 //!< millis reference
 /** the setup function runs once when you press reset or power the board */
 void setup() {
 	Display_Test.init();
-	Timer.init(250);	    //Base interrupt frequency 250Hz
 	Multiplexer.init(cathodes, DISPLAY_SIZE + 1);
 	Keyboard16keys.init();
+	Timer.init(250);	    //Base interrupt frequency 250Hz
 	old_millis = millis();
 //	Display_Test.write(12345);
-	Display_Test.dots = LED_67;
+//	Display_Test.dots = LED_67;
+	Keyboard16keys.numericInputInit(Display_Test.display, DISPLAY_SIZE);
 }
 
 /** the loop function runs over and over again until power down or reset */
@@ -61,7 +62,8 @@ void loop() {
 	if (millis() - old_millis >= 100) {
 		old_millis = millis();
 //		Display_Test.rowcol(Keyboard16keys.currentKeyRow, Keyboard16keys.currentKeyCol);
-		Display_Test.showKeyboard(Keyboard16keys);
+//		Display_Test.showKeyboard(Keyboard16keys);
+		Keyboard16keys.numericInput();
 	}
 }
 

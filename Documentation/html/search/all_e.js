@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['write_85',['write',['../class_m_x4___c301_class.html#ab8f7b5be472b1b626b0320e57d56ecf4',1,'MX4_C301Class']]],
-  ['writechar_86',['writeChar',['../class_m_x4___c301_class.html#a73b83cd3f604517c75907f9b96192a77',1,'MX4_C301Class::writeChar(char digit)'],['../class_m_x4___c301_class.html#aa4876ef86528fc4f5cfb5d0108cb6f61',1,'MX4_C301Class::writeChar(char digit, uint8_t blink_mask)']]],
-  ['writedigit_87',['writeDigit',['../class_m_x4___c301_class.html#a482e967b144d958f5610adfd16772f56',1,'MX4_C301Class::writeDigit(uint8_t picture)'],['../class_m_x4___c301_class.html#a3e50138b11c872b8695a7167cbb9ed86',1,'MX4_C301Class::writeDigit(uint8_t picture, uint8_t blink_mask)']]]
+  ['timer_91',['Timer',['../_timer_8cpp.html#acfa1f373cf78656bf7a7e23eb2283966',1,'Timer():&#160;Timer.cpp'],['../_timer_8h.html#acfa1f373cf78656bf7a7e23eb2283966',1,'Timer():&#160;Timer.cpp']]],
+  ['timer_2ecpp_92',['Timer.cpp',['../_timer_8cpp.html',1,'']]],
+  ['timer_2eh_93',['Timer.h',['../_timer_8h.html',1,'']]],
+  ['timerclass_94',['TimerClass',['../class_timer_class.html',1,'']]]
 ];
