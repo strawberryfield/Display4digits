@@ -32,7 +32,8 @@
 	#include "WProgram.h"
 #endif
 
-/** Hides timer 2 initialization */
+///@brief
+/// Hides timer 2 initialization 
 class TimerClass
 {
  protected:

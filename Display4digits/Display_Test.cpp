@@ -82,19 +82,7 @@ void Display_TestClass::showKeyboard(Keyboard16keysClass kb)
 	display[0] = kb.currentKeyRow;
 	display[1] = kb.currentKeyCol;
 	if (kb.currentKeyRow > 0) {
-		char c = kb.currentKey();
-		if (c >= '0' && c <= '9') {
-			display[3] = c - '0';
-		}
-		else if (c >= 'A' && c <= 'D') {
-			display[3] = c - 'A' + 10;
-		}
-		else if (c == '*') {
-			display[3] = ASTERISK;
-		}
-		else if (c == '#') {
-			display[3] = SHARP;
-		}
+		display[3] = ascii2keymap(kb.currentKey());
 	}
 	else {
 		display[3] = BLANK;

@@ -32,7 +32,7 @@
 	#include "WProgram.h"
 #endif
 
-///
+///@brief
 /// Generic multiplexer class
 class MultiplexerClass
 {

@@ -45,8 +45,8 @@
 // Empty char
 #define	BLANK	B10000000
 
-///
-///@brief 16 keys keypad manager
+///@brief
+/// 16 keys keypad manager
 class Keyboard16keysClass
 {
 protected:

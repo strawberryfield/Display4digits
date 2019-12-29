@@ -35,7 +35,8 @@
 #include "MX4_C301.h"
 #include "Keyboard16keys.h"
 
-/** Display test suite */
+///@brief 
+/// Display test suite 
 class Display_TestClass : public MX4_C301Class
 {
  private:

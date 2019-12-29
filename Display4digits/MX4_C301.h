@@ -72,11 +72,12 @@
 #define SHARP	B11001000
 #define DEGREES	B11100011
 #define QUOTES	B10100010
+#define UNDERSCORE	B10001000
 
 #define CHARMAP_SIZE	36
 
-/// 
-///@brief 7 segments 4 digits common cathodes LED display manager
+///@brief 
+/// 7 segments 4 digits common cathodes LED display manager
 class MX4_C301Class
 {
 protected:
@@ -100,7 +101,6 @@ public:
 	uint8_t blink[DISPLAY_SIZE + 1];	//!< Blink flags
 	int blink_speed = 125;				//!< default(125): 2Hz
 	uint8_t brightness = 255;			//!< default(255): Full light  (not yet implemented)
-
 	
 	/// @name Inits
 	/// Methods to initialize display
@@ -122,10 +122,14 @@ public:
 	/// Methods to write data at high level
 	///@{
 	void write(int value);				//!< displays an integer value
-	void set_all_digits(uint8_t picture);
-	void set_all_digits(uint8_t picture, uint8_t blink_mask);
-	void set_all_blink(uint8_t blink_mask);
+	void set_all_digits(uint8_t picture);						//!< sets the same picture to all digits
+	void set_all_digits(uint8_t picture, uint8_t blink_mask);	//!< sets the same picture and blink mask to all digits
+	void set_all_blink(uint8_t blink_mask);						//!< sets the same blink mask to all digits
 	///@}
+
+	uint8_t ascii2keymap(char c);		//!< conversion helper	
+	char keymap2ascii(uint8_t c);		//!< conversion helper	
+
 };
 
 extern MX4_C301Class MX4_C301;
